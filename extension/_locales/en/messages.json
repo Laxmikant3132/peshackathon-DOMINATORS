@@ -1,0 +1,56 @@
+{
+  "extensionName": {
+    "message": "Human Firewall URL Analyser"
+  },
+  "extensionDescription": {
+    "message": "Real-time analysis of domain reputation and landing page integrity."
+  },
+  "warningTitle": {
+    "message": "Security Warning"
+  },
+  "potentialRisk": {
+    "message": "Potential Security Risk"
+  },
+  "suspiciousDetected": {
+    "message": "Suspicious Link Detected"
+  },
+  "phishingDetected": {
+    "message": "Phishing Detected"
+  },
+  "flaggedMessage": {
+    "message": "This URL has been flagged as suspicious by the Human Firewall engine."
+  },
+  "goBack": {
+    "message": "Go Back to Safety"
+  },
+  "alwaysAllow": {
+    "message": "Always Allow this URL"
+  },
+  "scanPage": {
+    "message": "Scan Page"
+  },
+  "scanning": {
+    "message": "Scanning..."
+  },
+  "safeLink": {
+    "message": "Safe Link"
+  },
+  "readyToScan": {
+    "message": "Ready to scan..."
+  },
+  "backendOffline": {
+    "message": "Backend Offline"
+  },
+  "url": {
+    "message": "URL"
+  },
+  "confidence": {
+    "message": "Confidence"
+  },
+  "statusLabel": {
+    "message": "Current Page Status"
+  },
+  "logo": {
+    "message": "URL Analyser"
+  }
+}

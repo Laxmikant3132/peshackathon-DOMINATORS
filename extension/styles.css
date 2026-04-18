@@ -1,0 +1,35 @@
+/* styles.css for URL Analyser Extension */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+
+:root {
+  --primary: #00ffff;
+  --danger: #ff4d4d;
+  --warning: #ffbb00;
+  --success: #00ff88;
+  --bg: #000;
+  --glass: rgba(255, 255, 255, 0.05);
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+  color: #fff;
+}
+
+.glass {
+  background: var(--glass);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+}
+
+.neon-glow-cyan {
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+}
+
+.neon-glow-red {
+  box-shadow: 0 0 15px rgba(255, 77, 77, 0.4);
+}

@@ -1,0 +1,551 @@
+[
+    {
+        "type": "Data Exfiltration",
+        "session_id": "attack_1",
+        "severity": "high",
+        "priority": "HIGH",
+        "confidence": 0.95,
+        "timestamp": "2026-04-16T12:32:02.585578Z",
+        "target_ip": "45.33.2.1"
+    },
+    {
+        "type": "Data Exfiltration",
+        "session_id": "attack_4",
+        "severity": "high",
+        "priority": "HIGH",
+        "confidence": 0.95,
+        "timestamp": "2026-04-16T12:38:16.802166Z",
+        "target_ip": "203.0.113.5"
+    },
+    {
+        "type": "Data Exfiltration",
+        "session_id": "attack_8",
+        "severity": "high",
+        "priority": "HIGH",
+        "confidence": 0.95,
+        "timestamp": "2026-04-16T12:55:33.022062Z",
+        "target_ip": "8.8.8.8"
+    },
+    {
+        "type": "Data Exfiltration",
+        "session_id": "attack_9",
+        "severity": "high",
+        "priority": "HIGH",
+        "confidence": 0.95,
+        "timestamp": "2026-04-16T12:55:48.223640Z",
+        "target_ip": "198.51.100.22"
+    },
+    {
+        "type": "Data Exfiltration",
+        "session_id": "attack_10",
+        "severity": "high",
+        "priority": "HIGH",
+        "confidence": 0.95,
+        "timestamp": "2026-04-16T12:56:04.898413Z",
+        "target_ip": "203.0.113.5"
+    },
+    {
+        "type": "Data Exfiltration",
+        "session_id": "attack_11",
+        "severity": "high",
+        "priority": "HIGH",
+        "confidence": 0.95,
+        "timestamp": "2026-04-16T12:56:19.252341Z",
+        "target_ip": "45.33.2.1"
+    },
+    {
+        "type": "Data Exfiltration",
+        "session_id": "attack_12",
+        "severity": "high",
+        "priority": "HIGH",
+        "confidence": 0.95,
+        "timestamp": "2026-04-16T12:56:34.094034Z",
+        "target_ip": "8.8.8.8"
+    },
+    {
+        "type": "Data Exfiltration",
+        "session_id": "attack_13",
+        "severity": "high",
+        "priority": "HIGH",
+        "confidence": 0.95,
+        "timestamp": "2026-04-16T12:56:47.565749Z",
+        "target_ip": "45.33.2.1"
+    },
+    {
+        "type": "Data Exfiltration",
+        "session_id": "attack_14",
+        "severity": "high",
+        "priority": "HIGH",
+        "confidence": 0.95,
+        "timestamp": "2026-04-16T12:57:07.206801Z",
+        "target_ip": "8.8.8.8"
+    },
+    {
+        "type": "Data Exfiltration",
+        "session_id": "attack_15",
+        "severity": "high",
+        "priority": "HIGH",
+        "confidence": 0.95,
+        "timestamp": "2026-04-16T12:57:21.129364Z",
+        "target_ip": "1.1.1.1"
+    },
+    {
+        "type": "Data Exfiltration",
+        "session_id": "attack_16",
+        "severity": "high",
+        "priority": "HIGH",
+        "confidence": 0.95,
+        "timestamp": "2026-04-16T12:57:33.501986Z",
+        "target_ip": "45.33.2.1"
+    },
+    {
+        "type": "Data Exfiltration",
+        "session_id": "attack_20",
+        "severity": "high",
+        "priority": "HIGH",
+        "confidence": 0.95,
+        "timestamp": "2026-04-16T13:13:00.094246Z",
+        "target_ip": "8.8.8.8"
+    },
+    {
+        "type": "Data Exfiltration",
+        "session_id": "attack_21",
+        "severity": "high",
+        "priority": "HIGH",
+        "confidence": 0.95,
+        "timestamp": "2026-04-16T13:13:12.792408Z",
+        "target_ip": "185.199.108.153"
+    },
+    {
+        "type": "Data Exfiltration",
+        "session_id": "attack_23",
+        "severity": "high",
+        "priority": "HIGH",
+        "confidence": 0.95,
+        "timestamp": "2026-04-16T13:18:36.285357Z",
+        "target_ip": "203.0.113.5"
+    },
+    {
+        "type": "Data Exfiltration",
+        "session_id": "attack_25",
+        "severity": "high",
+        "priority": "HIGH",
+        "confidence": 0.95,
+        "timestamp": "2026-04-16T13:24:11.166182Z",
+        "target_ip": "198.51.100.22"
+    },
+    {
+        "type": "Data Exfiltration",
+        "session_id": "attack_28",
+        "severity": "high",
+        "priority": "HIGH",
+        "confidence": 0.95,
+        "timestamp": "2026-04-16T13:34:24.989240Z",
+        "target_ip": "45.33.2.1"
+    },
+    {
+        "type": "C2 Beaconing",
+        "session_id": "attack_2",
+        "severity": "medium",
+        "priority": "MEDIUM",
+        "confidence": 0.98,
+        "timestamp": "2026-04-16T12:32:32.585578Z",
+        "target_ip": "45.33.2.1"
+    },
+    {
+        "type": "Lateral Movement",
+        "session_id": "attack_2",
+        "severity": "medium",
+        "priority": "MEDIUM",
+        "confidence": 0.9,
+        "timestamp": "2026-04-16T12:36:40.585578Z",
+        "user": "dev_02"
+    },
+    {
+        "type": "Insider Threat",
+        "session_id": "attack_3",
+        "severity": "medium",
+        "priority": "MEDIUM",
+        "confidence": 0.82,
+        "timestamp": "2026-04-16T12:37:05.585578Z",
+        "user": "marketing_01"
+    },
+    {
+        "type": "C2 Beaconing",
+        "session_id": "attack_5",
+        "severity": "medium",
+        "priority": "MEDIUM",
+        "confidence": 0.98,
+        "timestamp": "2026-04-16T12:38:46.802166Z",
+        "target_ip": "45.33.2.1"
+    },
+    {
+        "type": "Lateral Movement",
+        "session_id": "attack_5",
+        "severity": "medium",
+        "priority": "MEDIUM",
+        "confidence": 0.9,
+        "timestamp": "2026-04-16T12:43:16.802166Z",
+        "user": "dev_02"
+    },
+    {
+        "type": "C2 Beaconing",
+        "session_id": "attack_6",
+        "severity": "medium",
+        "priority": "MEDIUM",
+        "confidence": 0.98,
+        "timestamp": "2026-04-16T12:44:14.802166Z",
+        "target_ip": "45.33.2.1"
+    },
+    {
+        "type": "Lateral Movement",
+        "session_id": "attack_6",
+        "severity": "medium",
+        "priority": "MEDIUM",
+        "confidence": 0.9,
+        "timestamp": "2026-04-16T12:48:43.802166Z",
+        "user": "dev_02"
+    },
+    {
+        "type": "C2 Beaconing",
+        "session_id": "attack_7",
+        "severity": "medium",
+        "priority": "MEDIUM",
+        "confidence": 0.98,
+        "timestamp": "2026-04-16T12:50:05.802166Z",
+        "target_ip": "45.33.2.1"
+    },
+    {
+        "type": "Lateral Movement",
+        "session_id": "attack_7",
+        "severity": "medium",
+        "priority": "MEDIUM",
+        "confidence": 0.9,
+        "timestamp": "2026-04-16T12:54:22.802166Z",
+        "user": "dev_02"
+    },
+    {
+        "type": "C2 Beaconing",
+        "session_id": "attack_17",
+        "severity": "medium",
+        "priority": "MEDIUM",
+        "confidence": 0.98,
+        "timestamp": "2026-04-16T12:58:03.501986Z",
+        "target_ip": "45.33.2.1"
+    },
+    {
+        "type": "Lateral Movement",
+        "session_id": "attack_17",
+        "severity": "medium",
+        "priority": "MEDIUM",
+        "confidence": 0.9,
+        "timestamp": "2026-04-16T13:02:30.501986Z",
+        "user": "dev_02"
+    },
+    {
+        "type": "C2 Beaconing",
+        "session_id": "attack_18",
+        "severity": "medium",
+        "priority": "MEDIUM",
+        "confidence": 0.98,
+        "timestamp": "2026-04-16T13:03:32.501986Z",
+        "target_ip": "45.33.2.1"
+    },
+    {
+        "type": "Lateral Movement",
+        "session_id": "attack_18",
+        "severity": "medium",
+        "priority": "MEDIUM",
+        "confidence": 0.9,
+        "timestamp": "2026-04-16T13:07:36.501986Z",
+        "user": "dev_02"
+    },
+    {
+        "type": "C2 Beaconing",
+        "session_id": "attack_19",
+        "severity": "medium",
+        "priority": "MEDIUM",
+        "confidence": 0.98,
+        "timestamp": "2026-04-16T13:08:27.501986Z",
+        "target_ip": "45.33.2.1"
+    },
+    {
+        "type": "Lateral Movement",
+        "session_id": "attack_19",
+        "severity": "medium",
+        "priority": "MEDIUM",
+        "confidence": 0.9,
+        "timestamp": "2026-04-16T13:12:24.501986Z",
+        "user": "dev_02"
+    },
+    {
+        "type": "C2 Beaconing",
+        "session_id": "attack_22",
+        "severity": "medium",
+        "priority": "MEDIUM",
+        "confidence": 0.98,
+        "timestamp": "2026-04-16T13:13:42.792408Z",
+        "target_ip": "45.33.2.1"
+    },
+    {
+        "type": "Lateral Movement",
+        "session_id": "attack_22",
+        "severity": "medium",
+        "priority": "MEDIUM",
+        "confidence": 0.9,
+        "timestamp": "2026-04-16T13:17:57.792408Z",
+        "user": "dev_02"
+    },
+    {
+        "type": "C2 Beaconing",
+        "session_id": "attack_24",
+        "severity": "medium",
+        "priority": "MEDIUM",
+        "confidence": 0.98,
+        "timestamp": "2026-04-16T13:19:06.285357Z",
+        "target_ip": "45.33.2.1"
+    },
+    {
+        "type": "Lateral Movement",
+        "session_id": "attack_24",
+        "severity": "medium",
+        "priority": "MEDIUM",
+        "confidence": 0.9,
+        "timestamp": "2026-04-16T13:23:28.285357Z",
+        "user": "dev_02"
+    },
+    {
+        "type": "C2 Beaconing",
+        "session_id": "attack_26",
+        "severity": "medium",
+        "priority": "MEDIUM",
+        "confidence": 0.98,
+        "timestamp": "2026-04-16T13:24:41.166182Z",
+        "target_ip": "45.33.2.1"
+    },
+    {
+        "type": "Lateral Movement",
+        "session_id": "attack_26",
+        "severity": "medium",
+        "priority": "MEDIUM",
+        "confidence": 0.9,
+        "timestamp": "2026-04-16T13:28:46.166182Z",
+        "user": "dev_02"
+    },
+    {
+        "type": "C2 Beaconing",
+        "session_id": "attack_27",
+        "severity": "medium",
+        "priority": "MEDIUM",
+        "confidence": 0.98,
+        "timestamp": "2026-04-16T13:29:44.166182Z",
+        "target_ip": "45.33.2.1"
+    },
+    {
+        "type": "Lateral Movement",
+        "session_id": "attack_27",
+        "severity": "medium",
+        "priority": "MEDIUM",
+        "confidence": 0.9,
+        "timestamp": "2026-04-16T13:33:56.166182Z",
+        "user": "dev_02"
+    },
+    {
+        "type": "C2 Beaconing",
+        "session_id": "attack_29",
+        "severity": "medium",
+        "priority": "MEDIUM",
+        "confidence": 0.98,
+        "timestamp": "2026-04-16T13:34:54.989240Z",
+        "target_ip": "45.33.2.1"
+    },
+    {
+        "type": "Lateral Movement",
+        "session_id": "attack_29",
+        "severity": "medium",
+        "priority": "MEDIUM",
+        "confidence": 0.9,
+        "timestamp": "2026-04-16T13:38:45.989240Z",
+        "user": "dev_02"
+    },
+    {
+        "type": "C2 Beaconing",
+        "session_id": "attack_30",
+        "severity": "medium",
+        "priority": "MEDIUM",
+        "confidence": 0.98,
+        "timestamp": "2026-04-16T13:39:36.989240Z",
+        "target_ip": "45.33.2.1"
+    },
+    {
+        "type": "Lateral Movement",
+        "session_id": "attack_30",
+        "severity": "medium",
+        "priority": "MEDIUM",
+        "confidence": 0.9,
+        "timestamp": "2026-04-16T13:43:43.989240Z",
+        "user": "dev_02"
+    },
+    {
+        "type": "C2 Beaconing",
+        "session_id": "attack_31",
+        "severity": "medium",
+        "priority": "MEDIUM",
+        "confidence": 0.98,
+        "timestamp": "2026-04-16T13:44:34.989240Z",
+        "target_ip": "45.33.2.1"
+    },
+    {
+        "type": "Lateral Movement",
+        "session_id": "attack_31",
+        "severity": "medium",
+        "priority": "MEDIUM",
+        "confidence": 0.9,
+        "timestamp": "2026-04-16T13:49:00.989240Z",
+        "user": "dev_02"
+    },
+    {
+        "type": "Brute Force",
+        "session_id": "attack_1",
+        "severity": "medium",
+        "priority": "LOW",
+        "confidence": 0.85,
+        "timestamp": "2026-04-16T12:31:51.369244Z",
+        "user": "dev_02"
+    },
+    {
+        "type": "Brute Force",
+        "session_id": "attack_4",
+        "severity": "medium",
+        "priority": "LOW",
+        "confidence": 0.95,
+        "timestamp": "2026-04-16T12:38:01.454883Z",
+        "user": "user1"
+    },
+    {
+        "type": "Brute Force",
+        "session_id": "attack_8",
+        "severity": "medium",
+        "priority": "LOW",
+        "confidence": 0.85,
+        "timestamp": "2026-04-16T12:55:20.292149Z",
+        "user": "dev_02"
+    },
+    {
+        "type": "Brute Force",
+        "session_id": "attack_9",
+        "severity": "medium",
+        "priority": "LOW",
+        "confidence": 0.85,
+        "timestamp": "2026-04-16T12:55:34.929579Z",
+        "user": "user2"
+    },
+    {
+        "type": "Brute Force",
+        "session_id": "attack_10",
+        "severity": "medium",
+        "priority": "LOW",
+        "confidence": 0.85,
+        "timestamp": "2026-04-16T12:55:49.456635Z",
+        "user": "user2"
+    },
+    {
+        "type": "Brute Force",
+        "session_id": "attack_11",
+        "severity": "medium",
+        "priority": "LOW",
+        "confidence": 0.85,
+        "timestamp": "2026-04-16T12:56:06.182659Z",
+        "user": "user1"
+    },
+    {
+        "type": "Brute Force",
+        "session_id": "attack_12",
+        "severity": "medium",
+        "priority": "LOW",
+        "confidence": 0.85,
+        "timestamp": "2026-04-16T12:56:21.010878Z",
+        "user": "user2"
+    },
+    {
+        "type": "Brute Force",
+        "session_id": "attack_13",
+        "severity": "medium",
+        "priority": "LOW",
+        "confidence": 0.85,
+        "timestamp": "2026-04-16T12:56:35.553908Z",
+        "user": "marketing_01"
+    },
+    {
+        "type": "Brute Force",
+        "session_id": "attack_14",
+        "severity": "medium",
+        "priority": "LOW",
+        "confidence": 0.95,
+        "timestamp": "2026-04-16T12:56:48.689573Z",
+        "user": "hr_manager"
+    },
+    {
+        "type": "Brute Force",
+        "session_id": "attack_15",
+        "severity": "medium",
+        "priority": "LOW",
+        "confidence": 0.95,
+        "timestamp": "2026-04-16T12:57:08.212051Z",
+        "user": "marketing_01"
+    },
+    {
+        "type": "Brute Force",
+        "session_id": "attack_16",
+        "severity": "medium",
+        "priority": "LOW",
+        "confidence": 0.85,
+        "timestamp": "2026-04-16T12:57:22.452376Z",
+        "user": "hr_manager"
+    },
+    {
+        "type": "Brute Force",
+        "session_id": "attack_20",
+        "severity": "medium",
+        "priority": "LOW",
+        "confidence": 0.85,
+        "timestamp": "2026-04-16T13:12:47.632635Z",
+        "user": "hr_manager"
+    },
+    {
+        "type": "Brute Force",
+        "session_id": "attack_21",
+        "severity": "medium",
+        "priority": "LOW",
+        "confidence": 0.85,
+        "timestamp": "2026-04-16T13:13:00.872172Z",
+        "user": "user2"
+    },
+    {
+        "type": "Brute Force",
+        "session_id": "attack_23",
+        "severity": "medium",
+        "priority": "LOW",
+        "confidence": 0.85,
+        "timestamp": "2026-04-16T13:18:24.102953Z",
+        "user": "hr_manager"
+    },
+    {
+        "type": "Brute Force",
+        "session_id": "attack_25",
+        "severity": "medium",
+        "priority": "LOW",
+        "confidence": 0.95,
+        "timestamp": "2026-04-16T13:23:57.750338Z",
+        "user": "user2"
+    },
+    {
+        "type": "Brute Force",
+        "session_id": "attack_28",
+        "severity": "medium",
+        "priority": "LOW",
+        "confidence": 0.85,
+        "timestamp": "2026-04-16T13:34:10.851517Z",
+        "user": "hr_manager"
+    }
+]

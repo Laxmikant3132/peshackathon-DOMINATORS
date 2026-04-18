@@ -1,0 +1,56 @@
+{
+  "extensionName": {
+    "message": "ह्यूमन फायरवॉल URL विश्लेषक"
+  },
+  "extensionDescription": {
+    "message": "डोमेन प्रतिष्ठा और लैंडिंग पृष्ठ अखंडता का वास्तविक समय विश्लेषण।"
+  },
+  "warningTitle": {
+    "message": "सुरक्षा चेतावनी"
+  },
+  "potentialRisk": {
+    "message": "संभावित सुरक्षा जोखिम"
+  },
+  "suspiciousDetected": {
+    "message": "संदिग्ध लिंक का पता चला"
+  },
+  "phishingDetected": {
+    "message": "फ़िशिंग का पता चला"
+  },
+  "flaggedMessage": {
+    "message": "ह्यूमन फायरवॉल इंजन द्वारा इस URL को संदिग्ध के रूप में चिह्नित किया गया है।"
+  },
+  "goBack": {
+    "message": "सुरक्षा पर वापस जाएं"
+  },
+  "alwaysAllow": {
+    "message": "इस URL को हमेशा अनुमति दें"
+  },
+  "scanPage": {
+    "message": "पेज स्कैन करें"
+  },
+  "scanning": {
+    "message": "स्कैन किया जा रहा है..."
+  },
+  "safeLink": {
+    "message": "सुरक्षित लिंक"
+  },
+  "readyToScan": {
+    "message": "स्कैन के लिए तैयार..."
+  },
+  "backendOffline": {
+    "message": "बैकएंड ऑफ़लाइन"
+  },
+  "url": {
+    "message": "URL"
+  },
+  "confidence": {
+    "message": "आत्मविश्वास"
+  },
+  "statusLabel": {
+    "message": "वर्तमान पेज की स्थिति"
+  },
+  "logo": {
+    "message": "URL विश्लेषक"
+  }
+}

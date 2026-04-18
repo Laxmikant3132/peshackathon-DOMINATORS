@@ -1,0 +1,56 @@
+{
+  "extensionName": {
+    "message": "ಹ್ಯೂಮನ್ ಫೈರ್ವಾಲ್ URL ವಿಶ್ಲೇಷಕ"
+  },
+  "extensionDescription": {
+    "message": "ಡೊಮೇನ್ ಖ್ಯಾತಿ ಮತ್ತು ಲ್ಯಾಂಡಿಂಗ್ ಪೇಜ್ ಸಮಗ್ರತೆಯ ನೈಜ-ಸಮಯದ ವಿಶ್ಲೇಷಣೆ."
+  },
+  "warningTitle": {
+    "message": "ಭದ್ರತಾ ಎಚ್ಚರಿಕೆ"
+  },
+  "potentialRisk": {
+    "message": "ಸಂಭವನೀಯ ಭದ್ರತಾ ಅಪಾಯ"
+  },
+  "suspiciousDetected": {
+    "message": "ಶಂಕಿತ ಲಿಂಕ್ ಪತ್ತೆಯಾಗಿದೆ"
+  },
+  "phishingDetected": {
+    "message": "ಫಿಶಿಂಗ್ ಪತ್ತೆಯಾಗಿದೆ"
+  },
+  "flaggedMessage": {
+    "message": "ಈ URL ಅನ್ನು ಹ್ಯೂಮನ್ ಫೈರ್ವಾಲ್ ಎಂಜಿನ್ ಶಂಕಿತ ಎಂದು ಗುರುತಿಸಿದೆ."
+  },
+  "goBack": {
+    "message": "ಸುರಕ್ಷತೆಗೆ ಹಿಂತಿರುಗಿ"
+  },
+  "alwaysAllow": {
+    "message": "ಈ URL ಅನ್ನು ಯಾವಾಗಲೂ ಅನುಮತಿಸಿ"
+  },
+  "scanPage": {
+    "message": "ಪುಟವನ್ನು ಸ್ಕ್ಯಾನ್ ಮಾಡಿ"
+  },
+  "scanning": {
+    "message": "ಸ್ಕ್ಯಾನ್ ಮಾಡಲಾಗುತ್ತಿದೆ..."
+  },
+  "safeLink": {
+    "message": "ಸುರಕ್ಷಿತ ಲಿಂಕ್"
+  },
+  "readyToScan": {
+    "message": "ಸ್ಕ್ಯಾನ್ ಮಾಡಲು ಸಿದ್ಧ..."
+  },
+  "backendOffline": {
+    "message": "ಬ್ಯಾಕೆಂಡ್ ಆಫ್‌ಲೈನ್"
+  },
+  "url": {
+    "message": "URL"
+  },
+  "confidence": {
+    "message": "ವಿಶ್ವಾಸಾರ್ಹತೆ"
+  },
+  "statusLabel": {
+    "message": "ಪ್ರಸ್ತುತ ಪುಟದ ಸ್ಥಿತಿ"
+  },
+  "logo": {
+    "message": "URL ವಿಶ್ಲೇಷಕ"
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "Metadata": {
+    "title": "Human Firewall | AI-Powered Phishing Detection",
+    "description": "Protect organizations from phishing attacks using AI-powered email analysis, URL scanning, and employee awareness training."
+  },
+  "Navbar": {
+    "home": "Home",
+    "features": "Features",
+    "analyzer": "Analyzer Tools",
+    "about": "About",
+    "login": "Login",
+    "signup": "Sign Up",
+    "logout": "Logout"
+  },
+  "Hero": {
+    "badge": "Next-Gen Cybersecurity",
+    "titlePart1": "Protect Yourself from",
+    "titlePart2": "Digital Scams",
+    "titlePart3": "in Real Time",
+    "subtitle": "Human Firewall analyzes suspicious links, payment requests, and messages before they can harm you.",
+    "ctaStart": "Start Scanning",
+    "ctaLearn": "Learn More",
+    "stats": "users protected daily",
+    "threatBlocked": "Threat Blocked",
+    "phishingDetected": "Phishing URL Detected",
+    "aiAnalysis": "AI Analysis",
+    "scanning": "Scanning Message..."
+  },
+  "Analyzer": {
+    "platformCapabilities": "Platform Capabilities",
+    "universal": "Universal",
+    "detection": "Detection",
+    "description": "Protecting your digital life across every touchpoint. Our AI engines analyze threats in real-time, no matter where they come from.",
+    "inputSource": "Input Source",
+    "processing": "PROCESSING...",
+    "analyzing": "Analyzing",
+    "verifiedSafe": "Verified Safe",
+    "suspiciousActivity": "Suspicious Activity",
+    "threatDetected": "Threat Detected",
+    "noIndicators": "No malicious indicators found",
+    "poweredBy": "Analysis powered by Advanced Neural Models",
+    "fullForensics": "Full Forensics",
+    "lockedTitle": "Deep Analysis Locked",
+    "lockedDesc": "Join the network to access historical threat data, community warnings, and advanced forensic reports.",
+    "loginToAccess": "Login to Access",
+    "createFreeAccount": "Create Free Account",
+    "tags": ["Real-time AI Analysis", "Instant Threat Score", "Phishing Detection"],
+    "upi": {
+      "title": "UPI Analyzer",
+      "desc": "Analyze suspicious UPI payment requests and detect fraud patterns before you pay.",
+      "placeholder": "Enter UPI ID (e.g. user@bank)",
+      "button": "Verify UPI Identity"
+    },
+    "url": {
+      "title": "URL Analyzer",
+      "desc": "Real-time URL reputation and phishing detection. Our sandbox analyzes destination content and more.",
+      "placeholder": "Paste URL (e.g. https://...)",
+      "button": "Initialize URL Scan"
+    },
+    "message": {
+      "title": "Message Analyzer",
+      "desc": "Social engineering detection for SMS, WhatsApp, or Emails. Our NLP engine identifies urgency.",
+      "placeholder": "Paste the message content here for deep neural analysis...",
+      "button": "Perform Content Analysis"
+    }
+  },
+  "Features": {
+    "title": "Powerful",
+    "highlight": "Cybersecurity Features",
+    "subtitle": "A comprehensive suite of tools designed to build an unbreakable digital perimeter.",
+    "items": [
+      {
+        "title": "AI Phishing Detection",
+        "desc": "Advanced neural networks analyze content for social engineering and phishing markers."
+      },
+      {
+        "title": "URL Threat Intelligence",
+        "desc": "Real-time scanning and classification of suspicious links and malicious domains."
+      },
+      {
+        "title": "UPI Fraud Detection",
+        "desc": "Identify suspicious payment requests and fraudulent UPI handles instantly."
+      },
+      {
+        "title": "Browser Protection",
+        "desc": "Stay protected while browsing with our real-time malicious site blocking."
+      },
+      {
+        "title": "Email Security Scanner",
+        "desc": "Deep scan email headers and attachments for hidden cyber threats."
+      },
+      {
+        "title": "Security Awareness Training",
+        "desc": "Educate users with simulated attacks and behavioral security insights."
+      }
+    ]
+  },
+  "HowItWorks": {
+    "title": "How It",
+    "highlight": "Works",
+    "subtitle": "Three simple steps to protect yourself from sophisticated digital scams.",
+    "steps": [
+      {
+        "title": "Scan suspicious message or link",
+        "desc": "Simply paste any suspicious URL, UPI ID, or message content into our analyzer tools."
+      },
+      {
+        "title": "AI detection engine analyzes patterns",
+        "desc": "Our advanced neural networks process the input to detect phishing markers."
+      },
+      {
+        "title": "Receive instant trust score and warning",
+        "desc": "Get immediate results with a trust score and detailed recommendations."
+      }
+    ]
+  },
+  "CTA": {
+    "title": "Join the",
+    "highlight": "Human Firewall Network",
+    "subtitle": "Protect yourself and your community from evolving digital scams. Get access to advanced threat detection.",
+    "signup": "Create Free Account",
+    "login": "Login Now",
+    "brands": ["Cyber Defense", "AI Protection", "Fraud Detection", "Threat Intel"]
+  },
+  "Footer": {
+    "description": "Next-generation cybersecurity platform designed to protect individuals and organizations from sophisticated social engineering scams.",
+    "product": "Product",
+    "company": "Company",
+    "legal": "Legal",
+    "features": "Features",
+    "securityTools": "Security Tools",
+    "training": "Training",
+    "about": "About",
+    "contact": "Contact",
+    "privacy": "Privacy Policy",
+    "terms": "Terms",
+    "rights": "© 2026 Human Firewall. All rights reserved.",
+    "secured": "Secured by Advanced AI Intelligence"
+  },
+  "Common": {
+    "welcome": "Welcome back",
+    "dashboard": "Dashboard",
+    "profile": "Profile",
+    "settings": "Settings",
+    "forgotPassword": "Forgot Password?",
+    "resetInstructions": "Enter your email to receive reset instructions.",
+    "sendResetEmail": "Send Reset Link",
+    "resetEmailSent": "Reset email sent! Please check your inbox.",
+    "backToLogin": "Back to Login",
+    "email": "Email Address",
+    "reseting": "Sending..."
+  }
+
+}

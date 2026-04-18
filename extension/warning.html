@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Security Warning - URL Analyser</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      background: #000;
+      color: #fff;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      max-width: 600px;
+      padding: 40px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 0, 0, 0.2);
+      border-radius: 40px;
+      backdrop-filter: blur(20px);
+      text-align: center;
+      box-shadow: 0 0 50px rgba(255, 0, 0, 0.1);
+    }
+    .icon {
+      font-size: 80px;
+      margin-bottom: 20px;
+      color: #ff4d4d;
+    }
+    h1 {
+      font-size: 32px;
+      font-weight: 900;
+      margin-bottom: 10px;
+      color: #ff4d4d;
+    }
+    p {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+    .details {
+      background: rgba(255, 0, 0, 0.1);
+      padding: 20px;
+      border-radius: 20px;
+      margin-bottom: 30px;
+      text-align: left;
+    }
+    .indicators {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .indicator {
+      background: rgba(255, 0, 0, 0.2);
+      padding: 5px 12px;
+      border-radius: 12px;
+      font-size: 12px;
+      font-weight: bold;
+      color: #ff4d4d;
+    }
+    .actions {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+    }
+    button {
+      padding: 16px 32px;
+      border-radius: 32px;
+      font-size: 16px;
+      font-weight: 900;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: none;
+    }
+    .btn-back {
+      background: #00ffff;
+      color: #000;
+    }
+    .btn-back:hover {
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+    }
+    .btn-allow {
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .btn-allow:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="icon">⚠️</div>
+    <h1 id="status" data-i18n="potentialRisk">Potential Security Risk</h1>
+    <p data-i18n="flaggedMessage">This URL has been flagged as suspicious by the Human Firewall engine.</p>
+    
+    <div class="details">
+      <div><strong data-i18n="url">URL:</strong> <span id="url-text" style="word-break: break-all; opacity: 0.8;"></span></div>
+      <div><strong data-i18n="confidence">Confidence:</strong> <span id="confidence">0%</span></div>
+      <div id="indicators-container" class="indicators"></div>
+    </div>
+
+    <div class="actions">
+      <button class="btn-back" id="btn-back" data-i18n="goBack">Go Back to Safety</button>
+      <button class="btn-allow" id="btn-allow" data-i18n="alwaysAllow">Always Allow this URL</button>
+    </div>
+  </div>
+  <script src="warning.js"></script>
+</body>
+</html>
