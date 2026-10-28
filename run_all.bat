@@ -5,7 +5,7 @@ echo Starting HumanFirewall System...
 start "HumanFirewall Backend" cmd /c "cd /d %~dp0backend && python main.py"
 
 :: Start Frontend in a new window
-start "HumanFirewall Frontend" cmd /c "cd /d %~dp0 && npm run dev"
+start "HumanFirewall Frontend" cmd /c "cd /d %~dp0frontend && npm run dev"
 
 echo.
 echo ======================================================

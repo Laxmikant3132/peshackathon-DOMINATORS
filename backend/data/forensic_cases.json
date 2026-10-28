@@ -1,0 +1,888 @@
+[
+  {
+    "case_id": "CASE-20260912-5749D4",
+    "status": "open",
+    "severity": "low",
+    "risk_score": 0,
+    "classification": "safe",
+    "detection_confidence": 0.92,
+    "created_at": "2026-09-12T14:48:54.528196+00:00",
+    "updated_at": "2026-09-12T14:48:54.528196+00:00",
+    "created_by": "yNcKQMGWkaQ1AM8vkkPLN0DCweH2",
+    "source": "manual",
+    "source_message_id": null,
+    "subject_masked": "Scam email",
+    "sender_masked": "Mallikarjun Kadagoudra <k***s@g***.com>",
+    "body_snippet": "--000000000000bac15e065b423138\nContent-Type: text/plain; charset=\"UTF-8\"\n\nClick on this link.\nI will give you money\nThe link: http://scam.gy\n\n--000000000000bac15e065b423138\nContent-Type: text/html; charset=\"UTF-8\"\n\n<div dir=\"auto\">Click on this link.<div dir=\"auto\">I will give yo",
+    "notes": [],
+    "related_emails": [],
+    "related_indicators": [
+      {
+        "description": "DMARC validation passed (DMARC=PASS, alignment=Aligned).",
+        "type": "Evidence",
+        "confidence": 0.98,
+        "source": "Email Authentication Validator"
+      },
+      {
+        "description": "SPF validation succeeded (SPF=PASS for sender domain gmail.com).",
+        "type": "Evidence",
+        "confidence": 0.95,
+        "source": "SPF Validator"
+      },
+      {
+        "description": "Body contains 3 external link(s)",
+        "type": "Inference",
+        "confidence": 0.65,
+        "source": "NLP/Heuristic Engine"
+      },
+      {
+        "description": "Critical term found: scam",
+        "type": "Inference",
+        "confidence": 0.85,
+        "source": "NLP/Heuristic Engine"
+      },
+      {
+        "description": "IPinfo geolocation unavailable \u2014 IPINFO_TOKEN is not configured in backend environment.",
+        "type": "Unavailable",
+        "confidence": 0,
+        "source": "IP Geolocation Provider (IPinfo)"
+      },
+      {
+        "description": "Domain registration (RDAP/WHOIS) unavailable: RDAP provider returned HTTP 403",
+        "type": "Unavailable",
+        "confidence": 0,
+        "source": "RDAP (rdap.org)"
+      },
+      {
+        "description": "Reputation for domain 'scam.gy' unavailable \u2014 VirusTotal provider not configured or unreachable.",
+        "type": "Unavailable",
+        "confidence": 0,
+        "source": "External Threat Intel (VirusTotal)"
+      },
+      {
+        "description": "Reputation for sender_domain 'gmail.com' unavailable \u2014 VirusTotal provider not configured or unreachable.",
+        "type": "Unavailable",
+        "confidence": 0,
+        "source": "External Threat Intel (VirusTotal)"
+      },
+      {
+        "description": "Reputation for ip '209.85.220.41' unavailable \u2014 VirusTotal provider not configured or unreachable.",
+        "type": "Unavailable",
+        "confidence": 0,
+        "source": "External Threat Intel (VirusTotal)"
+      }
+    ],
+    "sender_domains": [
+      "gmail.com"
+    ],
+    "ips": [
+      "209.85.220.41"
+    ],
+    "urls": [
+      "http://scam.gy"
+    ],
+    "attachment_hashes": [],
+    "campaign_id": "CAMPAIGN-GMAIL.COM",
+    "evidence": [
+      {
+        "evidence_id": "EVD-1DCD7F3C1B49",
+        "evidence_type": "raw_email_source",
+        "sha256": "cb4121cc143f093407677c0212b09911aabe188cce1d2307dbfd4699d5563fcf",
+        "collected_at": "2026-09-12T14:48:54.528196+00:00",
+        "collected_by": "yNcKQMGWkaQ1AM8vkkPLN0DCweH2",
+        "note": "SHA-256 of the submitted RFC 5322 source (content itself is not persisted under minimized-storage policy)."
+      },
+      {
+        "evidence_id": "EVD-BFFF84C40843",
+        "evidence_type": "analysis_snapshot",
+        "sha256": "6466ad06d466455bd4e2b175cbc2322971b528f018043cb8cc40d51003aa3b3b",
+        "collected_at": "2026-09-12T14:48:54.528196+00:00",
+        "collected_by": "yNcKQMGWkaQ1AM8vkkPLN0DCweH2",
+        "note": "SHA-256 of immutable analysis result snapshot."
+      }
+    ],
+    "action_log": [
+      {
+        "action": "case_created",
+        "analyst_id": "yNcKQMGWkaQ1AM8vkkPLN0DCweH2",
+        "timestamp": "2026-09-12T14:48:54.528196+00:00",
+        "details": {
+          "source": "manual"
+        }
+      }
+    ],
+    "analysis_metadata": {
+      "analysis_hash": "6466ad06d466455bd4e2b175cbc2322971b528f018043cb8cc40d51003aa3b3b",
+      "metadata_hash": "e8e44b10d93bb7e5d179fc19d4665d5e79297e14dd9e6322859c7b1fb0360beb",
+      "indicators": [
+        {
+          "type": "Evidence",
+          "description": "DMARC validation passed (DMARC=PASS, alignment=Aligned).",
+          "confidence": 0.98,
+          "source": "Email Authentication Validator",
+          "timestamp": "2026-09-12T14:47:32.975084+00:00"
+        },
+        {
+          "type": "Evidence",
+          "description": "SPF validation succeeded (SPF=PASS for sender domain gmail.com).",
+          "confidence": 0.95,
+          "source": "SPF Validator",
+          "timestamp": "2026-09-12T14:47:32.975084+00:00"
+        },
+        {
+          "type": "Inference",
+          "description": "Body contains 3 external link(s)",
+          "confidence": 0.65,
+          "source": "NLP/Heuristic Engine",
+          "timestamp": "2026-09-12T14:47:32.975084+00:00"
+        },
+        {
+          "type": "Inference",
+          "description": "Critical term found: scam",
+          "confidence": 0.85,
+          "source": "NLP/Heuristic Engine",
+          "timestamp": "2026-09-12T14:47:32.975084+00:00"
+        },
+        {
+          "type": "Unavailable",
+          "description": "IPinfo geolocation unavailable \u2014 IPINFO_TOKEN is not configured in backend environment.",
+          "confidence": 0,
+          "source": "IP Geolocation Provider (IPinfo)",
+          "timestamp": "2026-09-12T14:47:32.975084+00:00"
+        },
+        {
+          "type": "Unavailable",
+          "description": "Domain registration (RDAP/WHOIS) unavailable: RDAP provider returned HTTP 403",
+          "confidence": 0,
+          "source": "RDAP (rdap.org)",
+          "timestamp": "2026-09-12T14:47:32.975084+00:00"
+        },
+        {
+          "type": "Unavailable",
+          "description": "Reputation for domain 'scam.gy' unavailable \u2014 VirusTotal provider not configured or unreachable.",
+          "confidence": 0,
+          "source": "External Threat Intel (VirusTotal)",
+          "timestamp": "2026-09-12T14:47:32.975084+00:00"
+        },
+        {
+          "type": "Unavailable",
+          "description": "Reputation for sender_domain 'gmail.com' unavailable \u2014 VirusTotal provider not configured or unreachable.",
+          "confidence": 0,
+          "source": "External Threat Intel (VirusTotal)",
+          "timestamp": "2026-09-12T14:47:32.975084+00:00"
+        },
+        {
+          "type": "Unavailable",
+          "description": "Reputation for ip '209.85.220.41' unavailable \u2014 VirusTotal provider not configured or unreachable.",
+          "confidence": 0,
+          "source": "External Threat Intel (VirusTotal)",
+          "timestamp": "2026-09-12T14:47:32.975084+00:00"
+        }
+      ],
+      "collected_at": "2026-09-12T14:48:54.528196+00:00",
+      "engine_versions": {
+        "forensic_pipeline": "1.1",
+        "case_store": "1.0"
+      }
+    }
+  },
+  {
+    "case_id": "CASE-20260912-901E07",
+    "status": "open",
+    "severity": "critical",
+    "risk_score": 100,
+    "classification": "dangerous",
+    "detection_confidence": 0.99,
+    "created_at": "2026-09-12T15:16:38.222049+00:00",
+    "updated_at": "2026-09-12T15:16:38.222049+00:00",
+    "created_by": "system",
+    "source": "manual",
+    "source_message_id": null,
+    "subject_masked": "URGENT invoice payment diversion",
+    "sender_masked": "CEO <c***o@p***.com>",
+    "body_snippet": "URGENT wire transfer. Change bank account and verify password at http://93.184.216.34/login\r\n",
+    "notes": [],
+    "related_emails": [],
+    "related_indicators": [
+      {
+        "description": "DMARC policy validation failed (DMARC=FAIL, alignment=Unknown).",
+        "type": "Evidence",
+        "confidence": 0.98,
+        "source": "Email Authentication Validator"
+      },
+      {
+        "description": "SPF validation failed (SPF=FAIL for sender domain paypa1-verify.com).",
+        "type": "Evidence",
+        "confidence": 0.95,
+        "source": "SPF Validator"
+      },
+      {
+        "description": "Reply-To Domain Mismatch: From domain 'paypa1-verify.com' differs from Reply-To domain 'evil.example' (From 'ceo@paypa1-verify.com' routes replies to 'payroll@evil.example').",
+        "type": "Evidence",
+        "confidence": 0.95,
+        "source": "Sender Header Forensics"
+      },
+      {
+        "description": "Reply-To Full-Address Difference: From is 'ceo@paypa1-verify.com' but replies route to 'payroll@evil.example'.",
+        "type": "Evidence",
+        "confidence": 0.7,
+        "source": "Sender Header Forensics"
+      },
+      {
+        "description": "Lookalike domain detected: 'paypa1-verify.com' mimics 'PayPal' using character substitution",
+        "type": "Inference",
+        "confidence": 0.95,
+        "source": "Domain Typosquatting Engine"
+      },
+      {
+        "description": "Financial Fraud / Bank Manipulation pattern detected: 'wire transfer'",
+        "type": "Inference",
+        "confidence": 0.9,
+        "source": "NLP Behavioral Engine"
+      },
+      {
+        "description": "Urgent pressure tactic detected in content",
+        "type": "Inference",
+        "confidence": 0.65,
+        "source": "NLP/Heuristic Engine"
+      },
+      {
+        "description": "Body contains 1 external link(s)",
+        "type": "Inference",
+        "confidence": 0.65,
+        "source": "NLP/Heuristic Engine"
+      },
+      {
+        "description": "Aggressive/Deceptive Subject Line",
+        "type": "Inference",
+        "confidence": 0.65,
+        "source": "NLP/Heuristic Engine"
+      },
+      {
+        "description": "IP-based URL in content (High Risk)",
+        "type": "Inference",
+        "confidence": 0.65,
+        "source": "NLP/Heuristic Engine"
+      },
+      {
+        "description": "Suspicious pattern: urgent",
+        "type": "Inference",
+        "confidence": 0.65,
+        "source": "NLP/Heuristic Engine"
+      },
+      {
+        "description": "URL Forensic Alert [93.184.216.34]: URL points directly to an IP address instead of a domain name (RFC non-standard for legitimate services)",
+        "type": "Evidence",
+        "confidence": 0.95,
+        "source": "URL Forensic Analyzer"
+      },
+      {
+        "description": "IPinfo geolocation unavailable \u2014 IP Geolocation Provider not configured (IPINFO_TOKEN missing).",
+        "type": "Unavailable",
+        "confidence": 0.0,
+        "source": "IP Geolocation Provider (IPinfo)"
+      },
+      {
+        "description": "BEC / Wire Transfer Diversion pattern detected: 'urgent wire transfer'",
+        "type": "Inference",
+        "confidence": 0.9,
+        "source": "BEC/Financial Fraud Engine"
+      },
+      {
+        "description": "Domain registration (RDAP/WHOIS) unavailable: RDAP provider returned HTTP 403",
+        "type": "Unavailable",
+        "confidence": 0.0,
+        "source": "RDAP (rdap.org)"
+      },
+      {
+        "description": "Reputation for domain '216.34' unavailable \u2014 VirusTotal provider not configured or unreachable.",
+        "type": "Unavailable",
+        "confidence": 0.0,
+        "source": "External Threat Intel (VirusTotal)"
+      },
+      {
+        "description": "Reputation for sender_domain 'paypa1-verify.com' unavailable \u2014 VirusTotal provider not configured or unreachable.",
+        "type": "Unavailable",
+        "confidence": 0.0,
+        "source": "External Threat Intel (VirusTotal)"
+      },
+      {
+        "description": "Reputation for ip '93.184.216.34' unavailable \u2014 VirusTotal provider not configured or unreachable.",
+        "type": "Unavailable",
+        "confidence": 0.0,
+        "source": "External Threat Intel (VirusTotal)"
+      }
+    ],
+    "sender_domains": [
+      "paypa1-verify.com"
+    ],
+    "ips": [
+      "93.184.216.34"
+    ],
+    "urls": [
+      "http://93.184.216.34/login"
+    ],
+    "attachment_hashes": [],
+    "campaign_id": "CAMPAIGN-PAYPA1-VERIFY.COM",
+    "evidence": [
+      {
+        "evidence_id": "EVD-C39FF823508A",
+        "evidence_type": "raw_email_source",
+        "sha256": "27ecbb6d0ecd114bb33d91f93d8e15fdc41911f2cbe900f350a8c75a65f1cea4",
+        "collected_at": "2026-09-12T15:16:38.222049+00:00",
+        "collected_by": "system",
+        "note": "SHA-256 of the submitted RFC 5322 source (content itself is not persisted under minimized-storage policy)."
+      },
+      {
+        "evidence_id": "EVD-4858FDFE3143",
+        "evidence_type": "analysis_snapshot",
+        "sha256": "430b31e9fe0e76eb84a98f8ab35fed64512fa12dc410815067a064b8f389f664",
+        "collected_at": "2026-09-12T15:16:38.222049+00:00",
+        "collected_by": "system",
+        "note": "SHA-256 of immutable analysis result snapshot."
+      }
+    ],
+    "action_log": [
+      {
+        "action": "case_created",
+        "analyst_id": "system",
+        "timestamp": "2026-09-12T15:16:38.222049+00:00",
+        "details": {
+          "source": "manual"
+        }
+      }
+    ],
+    "analysis_metadata": {
+      "analysis_hash": "430b31e9fe0e76eb84a98f8ab35fed64512fa12dc410815067a064b8f389f664",
+      "metadata_hash": "adf830404c2dfb0c3eea56ab49aad2e1ef5eb518da8786011572fb232e7d9927",
+      "indicators": [
+        {
+          "type": "Evidence",
+          "description": "DMARC policy validation failed (DMARC=FAIL, alignment=Unknown).",
+          "confidence": 0.98,
+          "source": "Email Authentication Validator",
+          "timestamp": "2026-09-12T15:16:33.141791+00:00"
+        },
+        {
+          "type": "Evidence",
+          "description": "SPF validation failed (SPF=FAIL for sender domain paypa1-verify.com).",
+          "confidence": 0.95,
+          "source": "SPF Validator",
+          "timestamp": "2026-09-12T15:16:33.141791+00:00"
+        },
+        {
+          "type": "Evidence",
+          "description": "Reply-To Domain Mismatch: From domain 'paypa1-verify.com' differs from Reply-To domain 'evil.example' (From 'ceo@paypa1-verify.com' routes replies to 'payroll@evil.example').",
+          "confidence": 0.95,
+          "source": "Sender Header Forensics",
+          "timestamp": "2026-09-12T15:16:33.141791+00:00"
+        },
+        {
+          "type": "Evidence",
+          "description": "Reply-To Full-Address Difference: From is 'ceo@paypa1-verify.com' but replies route to 'payroll@evil.example'.",
+          "confidence": 0.7,
+          "source": "Sender Header Forensics",
+          "timestamp": "2026-09-12T15:16:33.141791+00:00"
+        },
+        {
+          "type": "Inference",
+          "description": "Lookalike domain detected: 'paypa1-verify.com' mimics 'PayPal' using character substitution",
+          "confidence": 0.95,
+          "source": "Domain Typosquatting Engine",
+          "timestamp": "2026-09-12T15:16:33.141791+00:00"
+        },
+        {
+          "type": "Inference",
+          "description": "Financial Fraud / Bank Manipulation pattern detected: 'wire transfer'",
+          "confidence": 0.9,
+          "source": "NLP Behavioral Engine",
+          "timestamp": "2026-09-12T15:16:33.141791+00:00"
+        },
+        {
+          "type": "Inference",
+          "description": "Urgent pressure tactic detected in content",
+          "confidence": 0.65,
+          "source": "NLP/Heuristic Engine",
+          "timestamp": "2026-09-12T15:16:33.141791+00:00"
+        },
+        {
+          "type": "Inference",
+          "description": "Body contains 1 external link(s)",
+          "confidence": 0.65,
+          "source": "NLP/Heuristic Engine",
+          "timestamp": "2026-09-12T15:16:33.141791+00:00"
+        },
+        {
+          "type": "Inference",
+          "description": "Aggressive/Deceptive Subject Line",
+          "confidence": 0.65,
+          "source": "NLP/Heuristic Engine",
+          "timestamp": "2026-09-12T15:16:33.141791+00:00"
+        },
+        {
+          "type": "Inference",
+          "description": "IP-based URL in content (High Risk)",
+          "confidence": 0.65,
+          "source": "NLP/Heuristic Engine",
+          "timestamp": "2026-09-12T15:16:33.141791+00:00"
+        },
+        {
+          "type": "Inference",
+          "description": "Suspicious pattern: urgent",
+          "confidence": 0.65,
+          "source": "NLP/Heuristic Engine",
+          "timestamp": "2026-09-12T15:16:33.141791+00:00"
+        },
+        {
+          "type": "Evidence",
+          "description": "URL Forensic Alert [93.184.216.34]: URL points directly to an IP address instead of a domain name (RFC non-standard for legitimate services)",
+          "confidence": 0.95,
+          "source": "URL Forensic Analyzer",
+          "timestamp": "2026-09-12T15:16:33.141791+00:00"
+        },
+        {
+          "type": "Unavailable",
+          "description": "IPinfo geolocation unavailable \u2014 IP Geolocation Provider not configured (IPINFO_TOKEN missing).",
+          "confidence": 0.0,
+          "source": "IP Geolocation Provider (IPinfo)",
+          "timestamp": "2026-09-12T15:16:33.141791+00:00"
+        },
+        {
+          "type": "Inference",
+          "description": "BEC / Wire Transfer Diversion pattern detected: 'urgent wire transfer'",
+          "confidence": 0.9,
+          "source": "BEC/Financial Fraud Engine",
+          "timestamp": "2026-09-12T15:16:33.141791+00:00"
+        },
+        {
+          "type": "Unavailable",
+          "description": "Domain registration (RDAP/WHOIS) unavailable: RDAP provider returned HTTP 403",
+          "confidence": 0.0,
+          "source": "RDAP (rdap.org)",
+          "timestamp": "2026-09-12T15:16:33.141791+00:00"
+        },
+        {
+          "type": "Unavailable",
+          "description": "Reputation for domain '216.34' unavailable \u2014 VirusTotal provider not configured or unreachable.",
+          "confidence": 0.0,
+          "source": "External Threat Intel (VirusTotal)",
+          "timestamp": "2026-09-12T15:16:33.141791+00:00"
+        },
+        {
+          "type": "Unavailable",
+          "description": "Reputation for sender_domain 'paypa1-verify.com' unavailable \u2014 VirusTotal provider not configured or unreachable.",
+          "confidence": 0.0,
+          "source": "External Threat Intel (VirusTotal)",
+          "timestamp": "2026-09-12T15:16:33.141791+00:00"
+        },
+        {
+          "type": "Unavailable",
+          "description": "Reputation for ip '93.184.216.34' unavailable \u2014 VirusTotal provider not configured or unreachable.",
+          "confidence": 0.0,
+          "source": "External Threat Intel (VirusTotal)",
+          "timestamp": "2026-09-12T15:16:33.141791+00:00"
+        }
+      ],
+      "collected_at": "2026-09-12T15:16:38.222049+00:00",
+      "engine_versions": {
+        "forensic_pipeline": "1.1",
+        "case_store": "1.0"
+      }
+    }
+  },
+  {
+    "case_id": "CASE-20260912-6446B2",
+    "status": "open",
+    "severity": "critical",
+    "risk_score": 100,
+    "classification": "dangerous",
+    "detection_confidence": 0.99,
+    "created_at": "2026-09-12T15:16:45.842694+00:00",
+    "updated_at": "2026-09-12T15:16:45.842694+00:00",
+    "created_by": "system",
+    "source": "gmail_auto_triage",
+    "source_message_id": "gmail-final-1",
+    "subject_masked": "URGENT invoice",
+    "sender_masked": "c***o@p***.com",
+    "body_snippet": "URGENT wire transfer verify password http://93.184.216.34/login",
+    "notes": [],
+    "related_emails": [
+      "gmail-final-1"
+    ],
+    "related_indicators": [
+      {
+        "description": "Lookalike domain detected: 'paypa1-verify.com' mimics 'PayPal' using character substitution",
+        "type": "Inference",
+        "confidence": 0.95,
+        "source": "Domain Typosquatting Engine"
+      },
+      {
+        "description": "Financial Fraud / Bank Manipulation pattern detected: 'wire transfer'",
+        "type": "Inference",
+        "confidence": 0.9,
+        "source": "NLP Behavioral Engine"
+      },
+      {
+        "description": "Urgent pressure tactic detected in content",
+        "type": "Inference",
+        "confidence": 0.65,
+        "source": "NLP/Heuristic Engine"
+      },
+      {
+        "description": "Body contains 1 external link(s)",
+        "type": "Inference",
+        "confidence": 0.65,
+        "source": "NLP/Heuristic Engine"
+      },
+      {
+        "description": "Aggressive/Deceptive Subject Line",
+        "type": "Inference",
+        "confidence": 0.65,
+        "source": "NLP/Heuristic Engine"
+      },
+      {
+        "description": "IP-based URL in content (High Risk)",
+        "type": "Inference",
+        "confidence": 0.65,
+        "source": "NLP/Heuristic Engine"
+      },
+      {
+        "description": "Suspicious pattern: urgent",
+        "type": "Inference",
+        "confidence": 0.65,
+        "source": "NLP/Heuristic Engine"
+      },
+      {
+        "description": "URL Forensic Alert [93.184.216.34]: URL points directly to an IP address instead of a domain name (RFC non-standard for legitimate services)",
+        "type": "Evidence",
+        "confidence": 0.95,
+        "source": "URL Forensic Analyzer"
+      },
+      {
+        "description": "BEC / Wire Transfer Diversion pattern detected: 'urgent wire transfer'",
+        "type": "Inference",
+        "confidence": 0.9,
+        "source": "BEC/Financial Fraud Engine"
+      },
+      {
+        "description": "Domain registration (RDAP/WHOIS) unavailable: RDAP provider returned HTTP 403",
+        "type": "Unavailable",
+        "confidence": 0.0,
+        "source": "RDAP (rdap.org)"
+      },
+      {
+        "description": "Reputation for domain '216.34' unavailable \u2014 VirusTotal provider not configured or unreachable.",
+        "type": "Unavailable",
+        "confidence": 0.0,
+        "source": "External Threat Intel (VirusTotal)"
+      },
+      {
+        "description": "Reputation for sender_domain 'paypa1-verify.com' unavailable \u2014 VirusTotal provider not configured or unreachable.",
+        "type": "Unavailable",
+        "confidence": 0.0,
+        "source": "External Threat Intel (VirusTotal)"
+      }
+    ],
+    "sender_domains": [
+      "paypa1-verify.com"
+    ],
+    "ips": [],
+    "urls": [
+      "http://93.184.216.34/login"
+    ],
+    "attachment_hashes": [],
+    "campaign_id": "CAMPAIGN-PAYPA1-VERIFY.COM",
+    "evidence": [
+      {
+        "evidence_id": "EVD-74E45ECE0DE3",
+        "evidence_type": "analysis_snapshot",
+        "sha256": "524ada3547e21e627eb29bd28b97a9efa30cc7303a1bf568fb3dfcc037a0228f",
+        "collected_at": "2026-09-12T15:16:45.842694+00:00",
+        "collected_by": "system",
+        "note": "SHA-256 of immutable analysis result snapshot."
+      }
+    ],
+    "action_log": [
+      {
+        "action": "case_created",
+        "analyst_id": "system",
+        "timestamp": "2026-09-12T15:16:45.842694+00:00",
+        "details": {
+          "source": "gmail_auto_triage"
+        }
+      }
+    ],
+    "analysis_metadata": {
+      "analysis_hash": "524ada3547e21e627eb29bd28b97a9efa30cc7303a1bf568fb3dfcc037a0228f",
+      "metadata_hash": "6ae3efd01914c0eddb6a8b8ae6301040327eb8585c0eb5f965fc5a56bdc08f06",
+      "indicators": [
+        {
+          "type": "Inference",
+          "description": "Lookalike domain detected: 'paypa1-verify.com' mimics 'PayPal' using character substitution",
+          "confidence": 0.95,
+          "source": "Domain Typosquatting Engine",
+          "timestamp": "2026-09-12T15:16:38.249603+00:00"
+        },
+        {
+          "type": "Inference",
+          "description": "Financial Fraud / Bank Manipulation pattern detected: 'wire transfer'",
+          "confidence": 0.9,
+          "source": "NLP Behavioral Engine",
+          "timestamp": "2026-09-12T15:16:38.249603+00:00"
+        },
+        {
+          "type": "Inference",
+          "description": "Urgent pressure tactic detected in content",
+          "confidence": 0.65,
+          "source": "NLP/Heuristic Engine",
+          "timestamp": "2026-09-12T15:16:38.249603+00:00"
+        },
+        {
+          "type": "Inference",
+          "description": "Body contains 1 external link(s)",
+          "confidence": 0.65,
+          "source": "NLP/Heuristic Engine",
+          "timestamp": "2026-09-12T15:16:38.249603+00:00"
+        },
+        {
+          "type": "Inference",
+          "description": "Aggressive/Deceptive Subject Line",
+          "confidence": 0.65,
+          "source": "NLP/Heuristic Engine",
+          "timestamp": "2026-09-12T15:16:38.249603+00:00"
+        },
+        {
+          "type": "Inference",
+          "description": "IP-based URL in content (High Risk)",
+          "confidence": 0.65,
+          "source": "NLP/Heuristic Engine",
+          "timestamp": "2026-09-12T15:16:38.249603+00:00"
+        },
+        {
+          "type": "Inference",
+          "description": "Suspicious pattern: urgent",
+          "confidence": 0.65,
+          "source": "NLP/Heuristic Engine",
+          "timestamp": "2026-09-12T15:16:38.249603+00:00"
+        },
+        {
+          "type": "Evidence",
+          "description": "URL Forensic Alert [93.184.216.34]: URL points directly to an IP address instead of a domain name (RFC non-standard for legitimate services)",
+          "confidence": 0.95,
+          "source": "URL Forensic Analyzer",
+          "timestamp": "2026-09-12T15:16:38.249603+00:00"
+        },
+        {
+          "type": "Inference",
+          "description": "BEC / Wire Transfer Diversion pattern detected: 'urgent wire transfer'",
+          "confidence": 0.9,
+          "source": "BEC/Financial Fraud Engine",
+          "timestamp": "2026-09-12T15:16:38.249603+00:00"
+        },
+        {
+          "type": "Unavailable",
+          "description": "Domain registration (RDAP/WHOIS) unavailable: RDAP provider returned HTTP 403",
+          "confidence": 0.0,
+          "source": "RDAP (rdap.org)",
+          "timestamp": "2026-09-12T15:16:38.249603+00:00"
+        },
+        {
+          "type": "Unavailable",
+          "description": "Reputation for domain '216.34' unavailable \u2014 VirusTotal provider not configured or unreachable.",
+          "confidence": 0.0,
+          "source": "External Threat Intel (VirusTotal)",
+          "timestamp": "2026-09-12T15:16:38.249603+00:00"
+        },
+        {
+          "type": "Unavailable",
+          "description": "Reputation for sender_domain 'paypa1-verify.com' unavailable \u2014 VirusTotal provider not configured or unreachable.",
+          "confidence": 0.0,
+          "source": "External Threat Intel (VirusTotal)",
+          "timestamp": "2026-09-12T15:16:38.249603+00:00"
+        }
+      ],
+      "collected_at": "2026-09-12T15:16:45.842694+00:00",
+      "engine_versions": {
+        "forensic_pipeline": "1.1",
+        "case_store": "1.0"
+      }
+    }
+  },
+  {
+    "case_id": "CASE-20260912-19E1F2",
+    "status": "open",
+    "severity": "medium",
+    "risk_score": 40,
+    "classification": "suspicious",
+    "detection_confidence": 0.75,
+    "created_at": "2026-09-12T15:21:22.250805+00:00",
+    "updated_at": "2026-09-12T15:21:22.250805+00:00",
+    "created_by": "system",
+    "source": "manual",
+    "source_message_id": null,
+    "subject_masked": "urgent",
+    "sender_masked": "x***@y***.com",
+    "body_snippet": "urgent password verify http://93.184.216.34/login",
+    "notes": [],
+    "related_emails": [],
+    "related_indicators": [
+      {
+        "description": "IP-based URL in content (High Risk)",
+        "type": "Inference",
+        "confidence": 0.65,
+        "source": "NLP/Heuristic Engine"
+      },
+      {
+        "description": "Suspicious pattern: urgent",
+        "type": "Inference",
+        "confidence": 0.65,
+        "source": "NLP/Heuristic Engine"
+      },
+      {
+        "description": "Aggressive/Deceptive Subject Line",
+        "type": "Inference",
+        "confidence": 0.65,
+        "source": "NLP/Heuristic Engine"
+      },
+      {
+        "description": "Urgent pressure tactic detected in content",
+        "type": "Inference",
+        "confidence": 0.65,
+        "source": "NLP/Heuristic Engine"
+      },
+      {
+        "description": "Body contains 1 external link(s)",
+        "type": "Inference",
+        "confidence": 0.65,
+        "source": "NLP/Heuristic Engine"
+      },
+      {
+        "description": "URL Forensic Alert [93.184.216.34]: URL points directly to an IP address instead of a domain name (RFC non-standard for legitimate services)",
+        "type": "Evidence",
+        "confidence": 0.95,
+        "source": "URL Forensic Analyzer"
+      },
+      {
+        "description": "Domain registration (RDAP/WHOIS) unavailable: RDAP provider returned HTTP 403",
+        "type": "Unavailable",
+        "confidence": 0.0,
+        "source": "RDAP (rdap.org)"
+      },
+      {
+        "description": "Reputation for domain '93.184.216.34' unavailable \u2014 VirusTotal provider not configured or unreachable.",
+        "type": "Unavailable",
+        "confidence": 0.0,
+        "source": "External Threat Intel (VirusTotal)"
+      },
+      {
+        "description": "Reputation for sender_domain 'y.com' unavailable \u2014 VirusTotal provider not configured or unreachable.",
+        "type": "Unavailable",
+        "confidence": 0.0,
+        "source": "External Threat Intel (VirusTotal)"
+      }
+    ],
+    "sender_domains": [
+      "y.com"
+    ],
+    "ips": [],
+    "urls": [
+      "http://93.184.216.34/login"
+    ],
+    "attachment_hashes": [],
+    "campaign_id": "CAMPAIGN-Y.COM",
+    "evidence": [
+      {
+        "evidence_id": "EVD-484D0CBCCE9B",
+        "evidence_type": "analysis_snapshot",
+        "sha256": "26afa863c45f42598a083c80fe054e08082bc915dac4f099d6b0cf56116365b8",
+        "collected_at": "2026-09-12T15:21:22.250805+00:00",
+        "collected_by": "system",
+        "note": "SHA-256 of immutable analysis result snapshot."
+      }
+    ],
+    "action_log": [
+      {
+        "action": "case_created",
+        "analyst_id": "system",
+        "timestamp": "2026-09-12T15:21:22.250805+00:00",
+        "details": {
+          "source": "manual"
+        }
+      }
+    ],
+    "analysis_metadata": {
+      "analysis_hash": "26afa863c45f42598a083c80fe054e08082bc915dac4f099d6b0cf56116365b8",
+      "metadata_hash": "68525079cd6f184b4793d81002e9620ea7a2a9c6bac1b80324499c12e554142b",
+      "indicators": [
+        {
+          "type": "Inference",
+          "description": "IP-based URL in content (High Risk)",
+          "confidence": 0.65,
+          "source": "NLP/Heuristic Engine",
+          "timestamp": "2026-09-12T15:21:15.274432+00:00"
+        },
+        {
+          "type": "Inference",
+          "description": "Suspicious pattern: urgent",
+          "confidence": 0.65,
+          "source": "NLP/Heuristic Engine",
+          "timestamp": "2026-09-12T15:21:15.274432+00:00"
+        },
+        {
+          "type": "Inference",
+          "description": "Aggressive/Deceptive Subject Line",
+          "confidence": 0.65,
+          "source": "NLP/Heuristic Engine",
+          "timestamp": "2026-09-12T15:21:15.274432+00:00"
+        },
+        {
+          "type": "Inference",
+          "description": "Urgent pressure tactic detected in content",
+          "confidence": 0.65,
+          "source": "NLP/Heuristic Engine",
+          "timestamp": "2026-09-12T15:21:15.274432+00:00"
+        },
+        {
+          "type": "Inference",
+          "description": "Body contains 1 external link(s)",
+          "confidence": 0.65,
+          "source": "NLP/Heuristic Engine",
+          "timestamp": "2026-09-12T15:21:15.274432+00:00"
+        },
+        {
+          "type": "Evidence",
+          "description": "URL Forensic Alert [93.184.216.34]: URL points directly to an IP address instead of a domain name (RFC non-standard for legitimate services)",
+          "confidence": 0.95,
+          "source": "URL Forensic Analyzer",
+          "timestamp": "2026-09-12T15:21:15.274432+00:00"
+        },
+        {
+          "type": "Unavailable",
+          "description": "Domain registration (RDAP/WHOIS) unavailable: RDAP provider returned HTTP 403",
+          "confidence": 0.0,
+          "source": "RDAP (rdap.org)",
+          "timestamp": "2026-09-12T15:21:15.274432+00:00"
+        },
+        {
+          "type": "Unavailable",
+          "description": "Reputation for domain '93.184.216.34' unavailable \u2014 VirusTotal provider not configured or unreachable.",
+          "confidence": 0.0,
+          "source": "External Threat Intel (VirusTotal)",
+          "timestamp": "2026-09-12T15:21:15.274432+00:00"
+        },
+        {
+          "type": "Unavailable",
+          "description": "Reputation for sender_domain 'y.com' unavailable \u2014 VirusTotal provider not configured or unreachable.",
+          "confidence": 0.0,
+          "source": "External Threat Intel (VirusTotal)",
+          "timestamp": "2026-09-12T15:21:15.274432+00:00"
+        }
+      ],
+      "collected_at": "2026-09-12T15:21:22.250805+00:00",
+      "engine_versions": {
+        "forensic_pipeline": "1.1",
+        "case_store": "1.0"
+      }
+    }
+  }
+]

@@ -1,0 +1,147 @@
+"""
+Forensic Report Generator
+Separates OBSERVED EVIDENCE from ANALYTICAL INFERENCE and UNAVAILABLE data,
+attaches confidence, sources, timestamps, limitations, and chain-of-custody
+metadata. This is a technical forensic report — no legal certification is claimed.
+"""
+from datetime import datetime as dt, timezone
+from typing import Dict, Any, List, Optional
+
+LIMITATIONS_SECTION = [
+    "Received header analysis is based on observable transport metadata supplied with the message; headers can be forged by a compromised or malicious relay.",
+    "IP geolocation indicates the estimated position of network infrastructure only. It does not establish the physical location or identity of any person.",
+    "Reputation and geolocation data are produced by external providers; when a provider is not configured or unreachable, findings are explicitly marked Unavailable — never estimated.",
+    "NLP/behavioral findings are heuristic inferences with stated confidence; they are not proof of malicious intent.",
+    "Attribution output supports infrastructure-level correlation only and never asserts a human identity.",
+    "This report provides technical evidence-preservation support (hashes, timestamps, audit log). It is not a legally certified record.",
+]
+
+
+def _now() -> str:
+    return dt.now(timezone.utc).isoformat()
+
+
+def generate_forensic_report(analysis: Dict[str, Any], case: Optional[Dict[str, Any]] = None,
+                             analyst_id: str = "system") -> Dict[str, Any]:
+    indicators = analysis.get("indicators") or []
+    evidence = [f for f in indicators if f.get("type") == "Evidence"]
+    inferences = [f for f in indicators if f.get("type") == "Inference"]
+    unavailable = [f for f in indicators if f.get("type") == "Unavailable"]
+
+    report: Dict[str, Any] = {
+        "report_metadata": {
+            "report_id": f"RPT-{dt.now(timezone.utc).strftime('%Y%m%d%H%M%S')}",
+            "generated_at": _now(),
+            "generated_by": analyst_id,
+            "classification_of_report": "Internal investigation working document",
+            "legal_notice": "Technical evidence-preservation support only. Not a legally certified record.",
+        },
+        "case": None,
+        "executive_summary": {
+            "classification": analysis.get("safety"),
+            "risk_score": analysis.get("score"),
+            "detection_confidence": analysis.get("confidence"),
+            "threat_level": (analysis.get("safety") or "").upper(),
+            "summary": analysis.get("reason"),
+        },
+        "observed_evidence": evidence,
+        "analytical_inference": inferences,
+        "unavailable_intelligence": unavailable,
+        "authentication": analysis.get("authentication"),
+        "relay_path": analysis.get("relay_hops"),
+        "origin_and_geolocation": {
+            "origin_assessment": (analysis.get("diagnostics") or {}).get("origin_assessment"),
+            "geolocation": analysis.get("geolocation"),
+            "notice": "IP geolocation does not prove a person's physical location or identity.",
+        },
+        "infrastructure_intelligence": {
+            "ip_intelligence": analysis.get("geolocation"),
+            "domain_intelligence": analysis.get("domain_dns"),
+            "domain_registration_rdap": analysis.get("domain_whois"),
+            "url_intelligence": analysis.get("urls_forensics"),
+            "attachment_intelligence": analysis.get("attachments_forensics"),
+            "threat_intelligence": analysis.get("threat_intel"),
+        },
+        "attribution_support": analysis.get("attribution"),
+        "campaign_correlation": analysis.get("campaign_correlations"),
+        "risk_factors": analysis.get("risk_factors"),
+        "correlation_graph": analysis.get("graph"),
+        "correlation_graph_summary": (analysis.get("graph") or {}).get("summary"),
+        "limitations": LIMITATIONS_SECTION,
+        "chain_of_custody": (case or {}).get("evidence") if case else analysis.get("evidence_metadata"),
+        "evidence_hashes": (case or {}).get("evidence") if case else analysis.get("evidence_metadata"),
+    }
+    if case:
+        report["case"] = {
+            "case_id": case.get("case_id"),
+            "status": case.get("status"),
+            "severity": case.get("severity"),
+            "created_at": case.get("created_at"),
+            "updated_at": case.get("updated_at"),
+            "analyst_notes": case.get("notes"),
+            "action_log": case.get("action_log"),
+            "related_emails": case.get("related_emails"),
+            "campaign_id": case.get("campaign_id"),
+        }
+    return report
+
+
+def render_report_text(report: Dict[str, Any]) -> str:
+    """Human-readable plain-text rendering for download/printing."""
+    lines: List[str] = []
+    rm = report["report_metadata"]
+    lines.append("=" * 78)
+    lines.append("EMAIL THREAT FORENSIC REPORT")
+    lines.append(f"Report ID: {rm['report_id']}   Generated: {rm['generated_at']}")
+    lines.append(f"Generated by: {rm['generated_by']}")
+    lines.append("=" * 78)
+    es = report["executive_summary"]
+    lines.append("\n[EXECUTIVE SUMMARY]")
+    lines.append(f"  Classification    : {es.get('classification', 'Unavailable')}")
+    lines.append(f"  Threat Level      : {es.get('threat_level', 'UNAVAILABLE')}")
+    lines.append(f"  Risk Score        : {es.get('risk_score', 'Unavailable')}/100")
+    lines.append(f"  Detection Confid. : {es.get('detection_confidence', 'Unavailable')}")
+    lines.append(f"  Summary           : {es.get('summary', 'Unavailable')}")
+    if report.get("case"):
+        c = report["case"]
+        lines.append(f"\n[CASE] {c.get('case_id')}  status={c.get('status')}  severity={c.get('severity')}  campaign={c.get('campaign_id')}")
+    for title, items in [
+        ("OBSERVED EVIDENCE", report.get("observed_evidence") or []),
+        ("ANALYTICAL INFERENCE", report.get("analytical_inference") or []),
+        ("UNAVAILABLE INTELLIGENCE", report.get("unavailable_intelligence") or []),
+    ]:
+        lines.append(f"\n[{title}] ({len(items)} item(s))")
+        for f_ in items:
+            lines.append(f"  - {f_.get('description')}")
+            lines.append(f"      confidence={f_.get('confidence')}  source={f_.get('source')}  at={f_.get('timestamp')}")
+    auth = report.get("authentication") or {}
+    if auth:
+        lines.append("\n[AUTHENTICATION]")
+        lines.append(f"  SPF={auth.get('spf')} DKIM={auth.get('dkim')} DMARC={auth.get('dmarc')} "
+                     f"(alignment spf={auth.get('spf_alignment')} dkim={auth.get('dkim_alignment')} dmarc={auth.get('dmarc_alignment')}) ARC={'present' if auth.get('has_arc') else 'none'}")
+    att = report.get("attribution_support") or {}
+    if att:
+        lines.append("\n[ATTRIBUTION SUPPORT]")
+        lines.append(f"  Probable infrastructure attribution: {att.get('probable_infrastructure_attribution') or 'Unavailable'}")
+        lines.append(f"  Confidence: {att.get('attribution_confidence')} ({att.get('attribution_confidence_level')})")
+    geo = (report.get("origin_and_geolocation") or {}).get("geolocation") or {}
+    lines.append("\n[ORIGIN & GEOLOCATION]")
+    lines.append(f"  Origin IP: {geo.get('ip') or 'Unavailable'}  Provider state: {geo.get('provider_state', 'UNAVAILABLE')}")
+    lines.append("  Notice: IP geolocation does not prove a person's physical location or identity.")
+    lines.append("\n[LIMITATIONS]")
+    for l in report.get("limitations") or []:
+        lines.append(f"  - {l}")
+    coc = report.get("chain_of_custody")
+    if coc:
+        lines.append("\n[CHAIN OF CUSTODY]")
+        if isinstance(coc, list):
+            for e in coc:
+                lines.append(f"  - {e.get('evidence_id')} {e.get('evidence_type')} sha256={e.get('sha256')} at={e.get('collected_at')}")
+        elif isinstance(coc, dict):
+            lines.append(f"  raw_eml_sha256={coc.get('raw_email_sha256')}")
+            lines.append(f"  analysis_sha256={coc.get('analysis_hash')}")
+            lines.append(f"  collected_at={coc.get('collected_at')}")
+    lines.append("\n" + "=" * 78)
+    lines.append("END OF REPORT")
+    return "\n".join(lines)
+

@@ -1,1 +1,0 @@
-# Response package initialization

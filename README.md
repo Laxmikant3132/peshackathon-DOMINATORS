@@ -1,111 +1,257 @@
-# 🛡️ Sentinel AI / Human Firewall
+# Human Firewall
 
-**Human Firewall (Sentinel AI Platform)** is an enterprise-grade cybersecurity platform that fuses a sophisticated AI-powered threat detection engine with live network monitoring, endpoint metrics tracking, and real-time inbox scanning. Together with an integrated training platform, it protects organizations from phishing attacks, malware, data exfiltration, lateral movement, and social engineering.
+Human Firewall is a cybersecurity and digital forensics platform for identifying phishing, scam campaigns, malicious infrastructure, payment fraud, and harmful online behavior. It combines a Python FastAPI threat engine, a modern Next.js dashboard, and a browser extension into one investigative workflow for analysts, security teams, and digital risk monitoring.
 
-## ✨ Overview
+## Overview
 
-Sentinel AI Platform operates through a **Hybrid Detection Engine** orchestrating multiple micro-sensors. It taps into underlying operating system metrics, active network connections, and integrated OAuth email workflows to catch threats the moment they emerge. Combined with our War Room capability, SOC analysts have complete visibility over endpoint security and data leaks.
+This project is built to analyze and classify:
 
-## 🚀 Core Features
+- Email phishing attempts and scam indicators
+- Suspicious URLs, domains, and website infrastructure
+- UPI and payment fraud patterns
+- Social abuse, toxic content, and platform threats
+- Geolocation and network intelligence tied to suspicious activity
+- Browser-based page risk in real time
 
-### 👁️ **Sentinel AI Monitoring & Live Telemetry**
-- **Endpoint Threat Telemetry**: Direct integration with system kernels via `psutil` to track high-risk security tools (Mimikatz, Nmap, Wireshark, etc.) and anomalous resource spikes (CPU/RAM).
-- **Network Traffic Forensics**: Deep tracking of network sockets to analyze IP beaconing, lateral movement patterns, bulk data exfiltration, and Typosquatting.
-- **Machine Learning Flow Analysis**: Network logs are fed directly into a pre-trained `joblib` Random Forest/Neural model that classifies flows and triggers 95%+ confidence alerts based on established malicious datasets.
+The platform is split into three layers:
 
-### 📧 **Real-Time Inbox Scanner**
-- **Automated 2-Second Polling**: Real-time integration with Gmail APIs allowing the platform to analyze mail units automatically. No manual refreshes required.
-- **AI Phishing Identification**: Scans incoming payloads, snippets, headers, and subjects against known heuristic manipulation tactics and NLP algorithms.
-- **Immediate Threat Quarantine**: Automatically flags messages as **Suspicious** or **Dangerous** and provides analysts with raw reporting tools to cybercrime agencies.
+- `backend/` — API, threat analysis logic, forensic services, and classification models
+- `frontend/` — dashboard UI built with Next.js and Tailwind CSS
+- `extension/` — browser protection layer for page warnings and real-time context checks
 
-### 👥 **Interactive Security War Room**
-- **Live Event Feed**: WebSockets stream network and endpoint events instantly into a graphical Command Center.
-- **Automated IP Blocking**: Analysts can one-click block suspicious IPs dynamically.
-- **Browser-level System Notifications**: Critical alerts (Confidence > 0.90) push directly natively through the browser while operating in the background.
+## Why this project stands out
 
-### 🎓 **Security Training & Posture Dashboard**
-- **Immersive Phishing Simulations**: Hands-on exercises that guide employees through identifying manipulation.
-- **Organizational Posture Analytics**: Granular dashboards showcasing the organization's current threat level, total telemetry pools, and intercepted threats.
+Human Firewall is not just a spam filter. It is designed for investigation and evidence-oriented analysis.
 
-## 🧠 Architecture Overview
+It helps users answer questions like:
 
-Our architecture splits the workload into an ultra-fast Next.js edge frontend and a highly concurrent Python FastAPI Threat Engine.
+- Is this message phishing or legitimate?
+- Is the sender or domain suspicious?
+- What is the likely origin of the traffic?
+- Is the infrastructure hosted, proxied, or routed through VPN/TOR services?
+- Does a URL or UPI identifier match known scam behavior?
+- Is there a broader campaign pattern behind this activity?
 
-### 1. **Next.js 14 Frontend**
-- **TypeScript & TailwindCSS**: Utilizing strict type-safety and modern utility classes.
-- **Framer Motion**: Smooth entry/exit animations for critical system alerts.
-- **React Context Pipeline `(MonitoringContext)`**: Seamless abstraction of WebSockets, `localStorage` state syncing, and browser notifications to ensure background scripts run unhindered across tabs.
+## Core features
 
-### 2. **FastAPI + ML Threat Engine (`threat_engine.py`)**
-- **Asynchronous Data Pumps**: Utilizing `asyncio` to pump hundreds of simulated and live network/endpoint events per second.
-- **Hybrid Categorization**:
-  - *Heuristic Models*: Brute Force thresholds, Beaconing timing analysis, and Exfiltration volume sensors.
-  - *ML Models*: Feature engineering on `dataset_resumido.csv` patterns for exact classification.
-- **WebSocket Emitters**: Broadcasts actionable intelligence to active dashboards without polling overhead.
+### 1. Email and phishing forensics
+- Email body, subject, sender, and header inspection
+- Threat scoring and suspicious-pattern detection
+- Authentication checks such as SPF, DKIM, and DMARC review
+- Domain mismatch detection against major brands
+- Attachment, DNS, and URL-level investigation
+- Evidence metadata and forensic reasoning output
 
-## 🛠️ Technology Stack
+### 2. Geolocation and infrastructure intelligence
+This is one of the most important features in the platform.
 
-| Domain | Technologies |
-| :--- | :--- |
-| **Frontend** | Next.js 14, TypeScript, Tailwind CSS, Framer Motion, Lucide React |
-| **Backend** | Python 3.9+, FastAPI, Uvicorn, Psutil, WebSockets |
-| **Machine Learning** | Scikit-learn, Pandas, Joblib (Network Flow Models) |
-| **Cloud & Auth** | Firebase Authentication, Google Workspace (Gmail API), Firestore |
+- IP-based geolocation lookup for country, region, city, and timezone
+- ASN, ISP, organization, and network type analysis
+- Hosting detection and infrastructure classification
+- VPN, proxy, TOR, and relay detection flags
+- Privacy and anonymity status reporting
+- Confidence scoring and provider-level sourcing for better investigation context
 
-## 📦 Installation & Setup
+These geolocation and network insights help analysts assess whether a suspicious message or threat is tied to a known region, infrastructure provider, or anonymous network path.
 
-### Prerequisites
-- **Node.js**: v18.0.0+
-- **Python**: v3.9+ 
-- **Google Cloud Console Account**: For Gmail API OAuth Credentials
-- **Firebase Project**: Configured for Web, Auth, and Firestore
+### 3. URL, domain, and DNS security analysis
+- URL reputation screening
+- Suspicious domain and keyword detection
+- SSL and domain-age checks
+- Typosquatting and impersonation analysis
+- DNS and infrastructure investigation for risky links
 
-### 1. Repository Setup
+### 4. UPI and payment scam defense
+- UPI fraud detection logic
+- Suspicious payment request identification
+- Scam keyword and impersonation checks
+- Risk scoring for fraud-prone transaction messages
+
+### 5. Social abuse and harmful content monitoring
+- Toxic comment and abuse heuristics
+- YouTube-related threat and harassment analysis
+- Indicator generation for harmful online behavior
+- Support for repeated offender and campaign-pattern review
+
+### 6. Threat intelligence and attribution support
+- Threat intel correlations
+- Domain and campaign-matching indicators
+- Evidence-oriented summaries for analyst review
+- Graph-based relationship context between suspicious entities
+
+### 7. Browser extension protection
+- Real-time page monitoring
+- Warning overlays for risky or malicious content
+- Quick user-facing alerts from the extension layer
+- Lightweight support for browser-based threat checks
+
+## Tech stack
+
+- Frontend: Next.js, React, TypeScript, Tailwind CSS
+- Backend: Python, FastAPI, Pydantic, Pandas, NumPy, scikit-learn
+- Data and ML: joblib-based models, heuristic rules, and forensic scoring
+- Integrations: geolocation APIs, Gmail/YouTube-related services, Firebase, threat intelligence hooks
+- Browser: Chrome and Edge extension with JavaScript background logic
+
+## Repository structure
+
+```text
+.
+├── backend/
+│   ├── data/
+│   ├── dataset/
+│   ├── model/
+│   ├── services/
+│   ├── tests/
+│   ├── app.py
+│   ├── main.py
+│   ├── threat_engine.py
+│   └── requirements.txt
+├── extension/
+│   ├── _locales/
+│   ├── background.js
+│   ├── manifest.json
+│   ├── popup.html
+│   ├── popup.js
+│   ├── styles.css
+│   ├── warning.html
+│   └── warning.js
+├── frontend/
+│   ├── app/
+│   ├── components/
+│   ├── i18n/
+│   ├── lib/
+│   ├── messages/
+│   ├── services/
+│   ├── package.json
+│   └── ...
+├── README.md
+├── run_all.bat
+└── .gitignore
+```
+
+## Prerequisites
+
+Before running the project, make sure you have:
+
+- Node.js 18+
+- npm
+- Python 3.9+
+- pip
+- A Chromium-based browser for extension testing
+
+## Quick start
+
+### 1. Clone the project
+
 ```bash
-git clone https://github.com/your-username/humanfirewall.git
-cd humanfirewall
+git clone <your-repository-url>
+cd HumanFirewall_youtube
 ```
 
-### 2. Environment Configuration
-Create a `.env.local` to map your backend and Firebase configurations.
-```env
-NEXT_PUBLIC_FIREBASE_API_KEY=your_key
-NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your_domain
-NEXT_PUBLIC_FIREBASE_PROJECT_ID=your_id
-```
+### 2. Set up the backend
 
-### 3. Start Backend Threat Engine (FastAPI)
-The backend acts as the AI analysis node and system monitor.
 ```bash
 cd backend
-pip install -r requirements.txt
-python -m uvicorn main:app --reload
-```
-*The backend runs on `http://localhost:8000`*
+python -m venv .venv
 
-### 4. Start Next.js Frontend
+# Windows PowerShell
+.\.venv\Scripts\Activate.ps1
+
+# macOS/Linux
+# source .venv/bin/activate
+
+pip install -r requirements.txt
+```
+
+Run the API:
+
 ```bash
-# Return to root directory
+uvicorn main:app --reload
+```
+
+The backend will be available at:
+
+- http://localhost:8000
+- API docs: http://localhost:8000/docs
+
+### 3. Set up the frontend
+
+Open a second terminal and run:
+
+```bash
+cd frontend
 npm install
 npm run dev
 ```
-*The frontend is accessible at `http://localhost:3000`*
 
-## 🤖 How the Threat Simulation Works
+The dashboard will be available at:
 
-Since production endpoints are rarely actively attacked while debugging, Sentinel contains a built-in `TrafficSimulator`.
-- **Endpoint Sensors**: Rapidly sweeps local `psutil` tasks. If you launch `nmap.exe` or `wireshark.exe` locally, Sentinel will flag it as a HIGH_RISK_TOOL in real time.
-- **Network Sensors**: Logs active ports and cross-references them against large bulk data transfers.
-- **Injections**: Inject Brute Force or Exfiltration attack packets via the Admin Panel to see the AI immediately intercept and categorize the threat.
+- http://localhost:3000
 
-## 🔒 Security Best Practices Utilized
-- **Aggressive Auto-Polling Isolation**: Utilizes strict timestamp cache-busting `(&t=Date.now())` preventing aggressive browser optimization from caching stale email payloads.
-- **Event Debouncing**: WebSocket emitters bundle logs into 200ms payload chunks to prevent React DOM lockups during "traffic bursts".
-- **Token Handling**: Silent background refresh of Gmail OAuth tokens mapped strictly to Firestore without exposing to component boundaries.
+### 4. Load the extension
 
-## 📄 License & Compliance
-This project enforces robust data-handling principles and targets compliance with modern GDPR strictures regarding PII in system logs. Licensed under the **ISC License**.
+1. Open Chrome or Edge
+2. Go to `chrome://extensions/`
+3. Turn on Developer mode
+4. Click Load unpacked
+5. Select the `extension/` folder from this repository
 
----
-**🛡️ Sentinel AI / Human Firewall**  
-*Next-generation endpoint visualization and zero-day threat interception.*
+## Environment and API configuration
+
+Some features depend on external services and environment variables, including:
+
+- YouTube API keys
+- IP geolocation providers
+- Firebase configuration
+- Threat-intel and provider-backed enrichment services
+
+Example environment variables:
+
+```bash
+export YOUTUBE_API_KEY="your_key_here"
+export IPINFO_TOKEN="your_token_here"
+```
+
+The main backend analysis entry points are in `backend/main.py` and `backend/threat_engine.py`.
+
+## Running the full app
+
+Use two terminals:
+
+- Terminal 1: backend
+- Terminal 2: frontend
+
+Then open the dashboard in your browser and use the extension for real-time browser-side checks.
+
+## Development notes
+
+- Backend logic is concentrated in `backend/main.py` and `backend/threat_engine.py`
+- Frontend pages live under `frontend/app/`
+- Extension logic is split across `extension/background.js`, `popup.js`, and warning pages
+- Test files are present under `backend/tests/` and `frontend/tests/`
+
+## Testing
+
+Backend tests:
+
+```bash
+cd backend
+pytest
+```
+
+Frontend tests:
+
+```bash
+cd frontend
+npx playwright test
+```
+
+## License
+
+This project is licensed under the ISC license.
+
+## Mission
+
+Human Firewall is designed to make digital threat investigation more actionable by combining phishing detection, geolocation intelligence, URL analysis, payment-fraud checks, and abusive-content monitoring into a single platform.
+
